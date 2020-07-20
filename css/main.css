@@ -69,11 +69,13 @@ body {
   left: 270px;
   top: 340px;
   transform: rotate(-32deg);
+  opacity: 0.8;
 }
 
 #welcome-section > #tagline > a {
   text-decoration: none;
   color: #fff;
+  opacity: 0.8;
 }
 
 /*****************STYLING NAV BAR*******************/
