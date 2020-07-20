@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FCC Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4c147d62a0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section id="welcome-section">
+      <h1 id="header">Charlotte Gray</h1>
+      <h3 id="tagline"><a href="https://www.freecodecamp.org/learn/" target="_blank">@freecodecamp</a> portfolio</h3>
+      <h5 id="bio">I'm taking part in #100DaysofCode to stay committed to the endeavour that is learning to code.</h5>
+      <h5><i class="fa fa-twitter" aria-hidden="true"></i>Follow me on Twitter and join me on the journey</h5>
+      <h5 id="counter"></h5>
+    </section>
+    <nav id="nav-bar">
+      <div class="link-container">
+        <a href="#welcome-section">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+    <section id="projects">
+      <h3>Projects</h3>
+      <p>These are the projects I have worked on during the challenge</p>
+      <div class="project-entry">
+        <h5 id="project-title">Project Title</h5>
+        <p id="project-tagline">Short description of project</p>
+        <div id="image-container"></div>
+        <p id="project-description">This is where I write more about the project</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h3>Connect with Me</h3>
+      <h5>Let's work together</h5>
+      <p>I am interested in gaining professional work experience in the tech field. Feel free to contact me with potential opportunities.</p>
+      <a href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry">email<i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://github.com/charlottegray17">github<i class="fa fa-github" aria-hidden="true"></i></a>
+      <a href="https://twitter.com/graygirl17" target="_blank">twitter<i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="http://www.shesupandaway.com/">blog<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+      <a href="#">share<i class="fa fa-share" aria-hidden="true"></i></a>
+    </section>
+
+
+    <script type="text/javascript">
+      var initialDate = new Date(2020, 5, 30); //Setting date to June 30th beginning of challenge
+      var now = Date.now(); // Grabbing today's date
+      var difference = now - initialDate; // Subtracting starting challenge from today's date
+      var millisecondsPerDay = 24 * 60 * 60 * 1000; // working out the interval to be calculated
+      var daysSince = Math.floor(difference / millisecondsPerDay);
+
+      document.getElementById("counter").innerHTML = 'Day: ' + daysSince + ' / 100';
+
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("nav-bar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --primary-color: #f5af15;
+  --secondary-color: #363636;
+  --dark-grey: #101010;
+  --transition-speed: 400ms;
+}
+
+/*****************BASE STYLES*******************/
+
+#welcome-section,
+#projects,
+#contact {
+  height: 100vh;
+  padding-top: 120px;
+}
+
+
+/*****************WELCOME COVER*******************/
+
+#welcome-section {
+  background-color: var(--secondary-color);
+  background-image: url('../img/cover-page.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/*positioning text elements*/
+#welcome-section h1,
+#welcome-section h3,
+#welcome-section h5, {}
+
+
+#welcome-section > #header {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 800;
+  width: 800px;
+  position: absolute;
+  left: 250px;
+  top: 280px;
+  transform: rotate(-33deg);
+}
+
+/* creating wording shadows*/
+#welcome-section > #header:after {
+  content: 'Charlotte Gray';
+  color: var(--secondary-color);
+  opacity: 0.5;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 7px;
+  left: 7px;
+}
+
+#welcome-section > #tagline {
+  width: 500px;
+  position: absolute;
+  left: 270px;
+  top: 340px;
+  transform: rotate(-32deg);
+}
+
+#welcome-section > #tagline > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*****************STYLING NAV BAR*******************/
+
+
+#nav-bar {
+  height: 40px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 15px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+/*Adding sticky class to menu when scroll position is reached*/
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+
+#nav-bar > .link-container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 700;
+}
+
+#nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+}
+
+#nav-bar a:hover {
+  color: var(--primary-color);
+  transition: var(--transition-speed);
+}
+
+#nav-bar a:active {
+  color: var(--dark-grey);
+  transition: var(--transition-speed);
+}
