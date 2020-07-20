@@ -19,7 +19,7 @@ body {
 #welcome-section,
 #projects,
 #contact {
-  height: 100vh;
+  height: 90vh;
   padding-top: 120px;
 }
 
@@ -32,50 +32,91 @@ body {
   background-size: cover;
   background-position: center;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*positioning text elements*/
-#welcome-section h1,
-#welcome-section h3,
-#welcome-section h5, {}
+#welcome-section > .welcome-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+  transform: rotate(-33deg);
+  align-items: center;
+  justify-content: center;
+}
 
-
-#welcome-section > #header {
+/*styling header*/
+#welcome-section > .welcome-content > #header {
   text-transform: uppercase;
   font-size: 5rem;
   font-weight: 800;
-  width: 800px;
-  position: absolute;
-  left: 250px;
-  top: 280px;
-  transform: rotate(-33deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* creating wording shadows*/
-#welcome-section > #header:after {
+/* creating header title wording shadows
+#welcome-section > .welcome-content > #header:after {
   content: 'Charlotte Gray';
   color: var(--secondary-color);
   opacity: 0.5;
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   z-index: -1;
-  top: 7px;
-  left: 7px;
+  top: 30px;
+  left: 15px;
+  width: 800px;
+}*/
+
+#welcome-section > .welcome-content > #tagline {
+  position: relative;
+  bottom: -10px;
 }
 
-#welcome-section > #tagline {
-  width: 500px;
-  position: absolute;
-  left: 270px;
-  top: 340px;
-  transform: rotate(-32deg);
-  opacity: 0.8;
-}
-
-#welcome-section > #tagline > a {
+#welcome-section > .welcome-content > #tagline > a {
   text-decoration: none;
   color: #fff;
-  opacity: 0.8;
+}
+
+/*arranging bio text*/
+#welcome-section > .welcome-content > #bio-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+#welcome-section > .welcome-content > #bio-wrap > h5 {
+  padding-bottom: 1rem;
+}
+
+/*Styling twitter line*/
+#welcome-section > .welcome-content > #bio-wrap > #twitter-follow {
+  font-size: 1.6rem;
+}
+
+/*positioning bird*/
+#welcome-section > .welcome-content > #bio-wrap > #twitter-follow > i {
+  margin-right: 10px;
+}
+
+#welcome-section > .welcome-content > #bio-wrap > #twitter-follow:hover > i {
+  color: #00acee;
+  transform: rotate(25deg);
+  transform: translateX(660px);
+  transition: 600ms ease;
+  z-index: 2;
+}
+
+#welcome-section > .welcome-content > #bio-wrap > #counter {
+  font-size: 2rem;
+>>>>>>> header
 }
 
 /*****************STYLING NAV BAR*******************/
