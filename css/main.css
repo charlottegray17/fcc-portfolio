@@ -183,5 +183,22 @@ body {
   height: 650px;
   left: 30px;
   bottom: 0;
+}
 
+/*****************ABOUT*******************/
+
+
+/*****************PROJECTS*******************/
+
+/*****************CONTACT*******************/
+
+#contact {
+  background: rgb(18, 18, 18);
+  display: flex;
+  color: white;
+}
+
+#contact-content {
+  display: flex;
+  flex-direction: column;
 }
