@@ -28,33 +28,44 @@
     </nav>
     <section id="about">
       <div id="about-content">
-        <h3>About</h3>
-        <p></p>
-      <!--  <img id="profile" src="img/charlotte-profile.png" alt="charlotte-profile">-->
-
+        <div class="image-container">
+          <img id="profile" src="img/charlotte-profile.png" alt="charlotte-profile">
+        </div>
+        <div id="about-text">
+          <h3 class="title">About</h3>
+          <h5 class="tagline">I am a creative designer branching into web development.</h5>
+          <p class="location">Based in London. Open to remote opportunties, and further down the line <span>very willing</span> to relocate to sunny locations.<br>
+          <br>Want to say hi, or have some words of wisdom for me?<br>I'd love to hear from you.</p>
+          <div id="message" class="message-button" class="selected">
+            <a onclick="changeButton()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=Hi%20from%20FCC%20portfolio"><i class="fa fa-envelope" aria-hidden="true"></i>Message Me</a>
+          </div>
+        </div>
       </div>
-
     </section>
     <section id="projects">
-      <h3>Projects</h3>
-      <p>These are the projects I have worked on during the challenge</p>
-      <div class="project-entry">
-        <h5 id="project-title">Project Title</h5>
-        <p id="project-tagline">Short description of project</p>
-        <div id="image-container"></div>
-        <p id="project-description">This is where I write more about the project</p>
+      <div id="project-content">
+        <h3 class="title">Projects</h3>
+        <p class="tagline">These are the projects I have worked on during the challenge</p>
+        <div class="project-entry">
+          <h5 id="project-title">Project Title</h5>
+          <p id="project-tagline">Short description of project</p>
+          <div id="image-container">project slider here</div>
+          <p id="project-description">This is where I write more about the project</p>
+        </div>
       </div>
     </section>
     <section id="contact">
       <div id="contact-content">
-        <h3>Connect with Me</h3>
-        <h5>Let's work together</h5>
-        <p>I am interested in gaining professional work experience in the tech field. Feel free to contact me with potential opportunities.</p>
-        <a href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry">email<i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a id="profile-link" href="https://github.com/charlottegray17">github<i class="fa fa-github" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/graygirl17" target="_blank">twitter<i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="http://www.shesupandaway.com/">blog<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-        <a href="#">share<i class="fa fa-share" aria-hidden="true">freecodecamp</i></a>
+        <h3 class="title">Connect with Me</h3>
+        <h5 class="tagline">Let's work together</h5>
+        <p>I am interested in gaining professional work experience in the tech field.<br> Feel free to contact me with potential opportunities.</p>
+        <div id="contact-links" class="link-selected">
+          <a onclick="changeLinks()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a id="profile-link" href="https://github.com/charlottegray17"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/graygirl17" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="http://www.shesupandaway.com/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a href="https://www.freecodecamp.org/charlottegray17"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+        </div>
       </div>
     </section>
 
@@ -79,6 +90,13 @@
         } else {
           navbar.classList.remove("sticky");
         }
+      }
+
+      //setting selected animation for email button
+      var button = document.getElementById("message");
+
+      function changeButton() {
+        button.classList.add("selected");
       }
 
     </script>
