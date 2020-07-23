@@ -16,15 +16,15 @@ body {
   --transition-speed: 400ms;
 }
 
-@media only screen and (min-width: 768px) {
-}
 /*****************BASE STYLES*******************/
 
+#welcome-section,
 #about,
 #projects,
 #contact {
-  height: 90vh;
-  padding-top: 100px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 #about .title,
@@ -34,13 +34,6 @@ body {
   padding-bottom: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-#about .tagline,
-#project-content .tagline,
-#contact .tagline {
-  font-size: 1.4rem;
-  padding-bottom: 1rem;
 }
 
 
@@ -55,24 +48,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 /*positioning text elements*/
 #welcome-section > .welcome-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 70px;
   transform: rotate(-33deg);
   align-items: center;
   justify-content: center;
+  overflow-y: hidden;
 }
 
 /*styling header*/
 #welcome-section > .welcome-content > #header {
   color: var(--secondary-color);
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   display: flex;
   align-items: center;
@@ -80,7 +72,7 @@ body {
 }
 
 /*creating header title wording shadows*/
-#welcome-section > .welcome-content > #header:after {
+/*#welcome-section > .welcome-content > #header:after {
   content: 'Charlotte Gray';
   color: var(--secondary-color);
   opacity: 0.15;
@@ -89,11 +81,9 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  z-index: -1;
   top: 30px;
-  right: 34px;
-  width: 800px;
-}
+  left: 125px;
+}*/
 
 #welcome-section > .welcome-content > #tagline {
   position: relative;
@@ -108,31 +98,36 @@ body {
 /*arranging bio text*/
 #welcome-section > .welcome-content > #bio-wrap {
   color: var(--secondary-color);
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  overflow: hidden;
 }
 
 #welcome-section > .welcome-content > #bio-wrap > h5 {
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 /*Styling twitter line*/
 #welcome-section > .welcome-content > #bio-wrap > #twitter-follow {
-  font-size: 1.6rem;
+  font-size: 0.9rem;
 }
 
 /*positioning bird*/
 #welcome-section > .welcome-content > #bio-wrap > #twitter-follow > i {
   margin-right: 10px;
+  color: #00acee;
+  font-size: 1.2rem;
 }
 
 #welcome-section > .welcome-content > #bio-wrap:hover > #twitter-follow > i {
   color: #00acee;
   transform: rotate(25deg);
-  transform: translateX(660px);
+  transform: translateX(390px);
   transition: 600ms ease;
   z-index: 2;
 }
@@ -148,6 +143,7 @@ body {
 
 
 #navbar {
+  width: 100vw;
   height: 40px;
   background-color: var(--secondary-color);
   padding: 15px 0px;
@@ -176,8 +172,9 @@ body {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.3rem;
+  padding: 0 15px;
 }
 
 #navbar a:hover {
@@ -198,36 +195,37 @@ body {
 
 
 #about > #about-content {
-  position: relative;
   height: 90vh;
 }
 
+#about .image-container {
+  display: flex;
+  justify-content: center;
+}
+
 #about img {
-  position: absolute;
-  height: 650px;
-  left: 30px;
-  bottom: 0;
+  height: 250px;
+  padding-top: 50px;
 }
 
 #about-text {
-  text-align: right;
-  padding-top: 100px;
-  position: absolute;
-  right: 100px;
-}
-
-#about-text .title,
-#about-text .tagline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
 }
 
 #about-text h5 {
-  font-size: 2rem;
+  font-size: 1.1rem;
+  padding-bottom: 13px;
 }
 
 #about-text p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding-bottom: 1rem;
-  max-width: 650px;
+  max-width: 80vw;
 }
 
 #about-text p span {
@@ -236,9 +234,7 @@ body {
 
 .message-button {
   margin-top: 2rem;
-  padding: 25px;
-  position: absolute;
-  right: 0px;
+  padding: 15px;
   width: auto;
   background-color: #3ea095;
   border-radius: 8px;
@@ -250,8 +246,8 @@ body {
 }
 
 .message-button:hover i {
-	-webkit-animation: wobble-ver-right 0.8s both;
-	        animation: wobble-ver-right 0.8s both;
+  -webkit-animation: wobble-ver-right 0.8s both;
+          animation: wobble-ver-right 0.8s both;
 }
 
 /* ----------------------------------------------
@@ -489,4 +485,482 @@ body {
 #contact-links a {
   text-decoration: none;
   color: white;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  /*****************BASE STYLES*******************/
+
+  #about,
+  #projects,
+  #contact {
+    height: 90vh;
+    padding-top: 100px;
+  }
+
+  #about .title,
+  #projects .title,
+  #contact .title {
+    font-size: 2.2rem;
+    padding-bottom: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  #about .tagline,
+  #project-content .tagline,
+  #contact .tagline {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+
+  /*****************WELCOME COVER*******************/
+
+  #welcome-section {
+    background-color: var(--secondary-color);
+    background-image: url('../img/cover-page.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  /*positioning text elements*/
+  #welcome-section > .welcome-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+    transform: rotate(-33deg);
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*styling header*/
+  #welcome-section > .welcome-content > #header {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /*creating header title wording shadows*/
+  #welcome-section > .welcome-content > #header:after {
+    content: 'Charlotte Gray';
+    color: var(--secondary-color);
+    opacity: 0.15;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: 34px;
+    width: 800px;
+  }
+
+  #welcome-section > .welcome-content > #tagline {
+    position: relative;
+    bottom: -10px;
+  }
+
+  #welcome-section > .welcome-content > #tagline > a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /*arranging bio text*/
+  #welcome-section > .welcome-content > #bio-wrap {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  #welcome-section > .welcome-content > #bio-wrap > h5 {
+    padding-bottom: 1rem;
+  }
+
+  /*Styling twitter line*/
+  #welcome-section > .welcome-content > #bio-wrap > #twitter-follow {
+    font-size: 1.6rem;
+  }
+
+  /*positioning bird*/
+  #welcome-section > .welcome-content > #bio-wrap > #twitter-follow > i {
+    margin-right: 10px;
+  }
+
+  #welcome-section > .welcome-content > #bio-wrap:hover > #twitter-follow > i {
+    color: #00acee;
+    transform: rotate(25deg);
+    transform: translateX(660px);
+    transition: 600ms ease;
+    z-index: 2;
+  }
+
+  #welcome-section > .welcome-content > #bio-wrap > #counter {
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 50px;
+  }
+
+  /*****************STYLING NAV BAR*******************/
+
+
+  #navbar {
+    height: 40px;
+    background-color: var(--secondary-color);
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*Adding sticky class to menu when scroll position is reached*/
+  .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+  }
+
+
+  #navbar > .link-container {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 700;
+  }
+
+  #navbar a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.3rem;
+  }
+
+  #navbar a:hover {
+    color: var(--primary-color);
+    transition: var(--transition-speed);
+  }
+
+  #navbar a:active {
+    color: var(--dark-grey);
+    transition: var(--transition-speed);
+  }
+
+  /*****************ABOUT*******************/
+  #about {
+    background: #9e9d9d;
+    z-index: -2;
+  }
+
+
+  #about > #about-content {
+    position: relative;
+    height: 90vh;
+  }
+
+  #about img {
+    position: absolute;
+    height: 650px;
+    left: 30px;
+    bottom: 0;
+  }
+
+  #about-text {
+    text-align: right;
+    padding-top: 100px;
+    position: absolute;
+    right: 100px;
+  }
+
+  #about-text .title,
+  #about-text .tagline {
+  }
+
+  #about-text h5 {
+    font-size: 2rem;
+  }
+
+  #about-text p {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+    max-width: 650px;
+  }
+
+  #about-text p span {
+    text-decoration: underline;
+  }
+
+  .message-button {
+    margin-top: 2rem;
+    padding: 25px;
+    position: absolute;
+    right: 0px;
+    width: auto;
+    background-color: #3ea095;
+    border-radius: 8px;
+  }
+
+  .message-button:hover {
+    background-color: #15666e;
+    transition: var(--transition-speed);
+  }
+
+  .message-button:hover i {
+  	-webkit-animation: wobble-ver-right 0.8s both;
+  	        animation: wobble-ver-right 0.8s both;
+  }
+
+  /* ----------------------------------------------
+   * Generated by Animista on 2020-7-21 23:23:6
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info.
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+  /**
+   * ----------------------------------------
+   * animation wobble-ver-right
+   * ----------------------------------------
+   */
+  @-webkit-keyframes wobble-ver-right {
+    0%,
+    100% {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateY(-30px) rotate(6deg);
+              transform: translateY(-30px) rotate(6deg);
+    }
+    30% {
+      -webkit-transform: translateY(15px) rotate(-6deg);
+              transform: translateY(15px) rotate(-6deg);
+    }
+    45% {
+      -webkit-transform: translateY(-15px) rotate(3.6deg);
+              transform: translateY(-15px) rotate(3.6deg);
+    }
+    60% {
+      -webkit-transform: translateY(9px) rotate(-2.4deg);
+              transform: translateY(9px) rotate(-2.4deg);
+    }
+    75% {
+      -webkit-transform: translateY(-6px) rotate(1.2deg);
+              transform: translateY(-6px) rotate(1.2deg);
+    }
+  }
+  @keyframes wobble-ver-right {
+    0%,
+    100% {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateY(-30px) rotate(6deg);
+              transform: translateY(-30px) rotate(6deg);
+    }
+    30% {
+      -webkit-transform: translateY(15px) rotate(-6deg);
+              transform: translateY(15px) rotate(-6deg);
+    }
+    45% {
+      -webkit-transform: translateY(-15px) rotate(3.6deg);
+              transform: translateY(-15px) rotate(3.6deg);
+    }
+    60% {
+      -webkit-transform: translateY(9px) rotate(-2.4deg);
+              transform: translateY(9px) rotate(-2.4deg);
+    }
+    75% {
+      -webkit-transform: translateY(-6px) rotate(1.2deg);
+              transform: translateY(-6px) rotate(1.2deg);
+    }
+  }
+
+  .message-button:active {
+    background-color: var(--primary-color);
+    transition: var(--transition-speed);
+  }
+
+  .message-button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .fa-envelope{
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+
+  /***what the message button does once clicked*/
+  .selected {
+    animation-name: selected;
+    animation-duration: 2s;
+  }
+
+  @keyframes selected {
+    from {background-color: var(--primary-color);}
+    to {background-color: #3ea095;}
+  }
+
+  /*****************PROJECTS*******************/
+
+  #projects {
+    background-color: #b1dee0;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  #project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-entries {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .project-entries a {
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .project-tile {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-tile {
+    height: 320px;
+    width: 600px;
+    margin: 20px;
+    color: white;
+    display: flex;
+  }
+
+  #technical {
+    background-image: url('../img/technical-preview.png');
+    background-size: cover;
+    background-position: left;
+  }
+
+  #unplugged {
+    background-image: url('../img/unplugged-preview.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #product {
+    background-image: url('../img/product-preview.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pantry {
+    background-image: url('../img/pantry-preview.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title-container {
+    background-color: #54888a;
+    position: relative;
+    top: -20px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #project-title {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  #technical-image-container {
+    background-image: url('../img/technical-preview.png');
+  }
+
+
+  /*****************CONTACT*******************/
+
+  #contact {
+    background: rgb(18, 18, 18);
+    display: flex;
+    color: white;
+  }
+
+  #contact .title,
+  #contact .tagline {
+  }
+
+  #contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  #contact-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    width: 40%;
+    padding-top: 4rem;
+  }
+
+  #contact-links i {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+
+  #contact-links i:hover {
+    color: var(--primary-color);
+    transform: translateY(-10px);
+    transition: var(--transition-speed) ease;
+  }
+
+  #contact-links a {
+    text-decoration: none;
+    color: white;
+  }
+
 }
