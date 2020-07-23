@@ -16,14 +16,15 @@ body {
   --transition-speed: 400ms;
 }
 
+@media only screen and (min-width: 768px) {
+}
 /*****************BASE STYLES*******************/
 
-#welcome-section,
 #about,
 #projects,
 #contact {
   height: 90vh;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 #about .title,
@@ -61,7 +62,7 @@ body {
 #welcome-section > .welcome-content {
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px;
+  margin-bottom: 70px;
   transform: rotate(-33deg);
   align-items: center;
   justify-content: center;
@@ -146,7 +147,7 @@ body {
 /*****************STYLING NAV BAR*******************/
 
 
-#nav-bar {
+#navbar {
   height: 40px;
   background-color: var(--secondary-color);
   padding: 15px 0px;
@@ -163,7 +164,7 @@ body {
 }
 
 
-#nav-bar > .link-container {
+#navbar > .link-container {
   width: 60%;
   display: flex;
   align-items: center;
@@ -171,7 +172,7 @@ body {
   font-weight: 700;
 }
 
-#nav-bar a {
+#navbar a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
@@ -179,12 +180,12 @@ body {
   letter-spacing: 0.3rem;
 }
 
-#nav-bar a:hover {
+#navbar a:hover {
   color: var(--primary-color);
   transition: var(--transition-speed);
 }
 
-#nav-bar a:active {
+#navbar a:active {
   color: var(--dark-grey);
   transition: var(--transition-speed);
 }
@@ -357,6 +358,8 @@ body {
 
 #projects {
   background-color: #b1dee0;
+  height: auto;
+  padding-bottom: 50px;
 }
 
 #project-content {
@@ -367,45 +370,76 @@ body {
 }
 
 .project-entries {
-  width: 90vw;
+  width: 95vw;
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
 }
 
-.project-entry {
+.project-entries a {
+  padding: 0;
+  text-decoration: none;
+}
+
+.project-tile {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.project-entry {
+.project-tile {
   height: 320px;
   width: 600px;
-  background-color: darkblue;
   margin: 20px;
   color: white;
   display: flex;
 }
 
+#technical {
+  background-image: url('../img/technical-preview.png');
+  background-size: cover;
+  background-position: left;
+}
+
+#unplugged {
+  background-image: url('../img/unplugged-preview.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#product {
+  background-image: url('../img/product-preview.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#pantry {
+  background-image: url('../img/pantry-preview.png');
+  background-size: cover;
+  background-position: center;
+}
+
 .title-container {
-  background-color: grey;
+  background-color: #54888a;
   position: relative;
   top: -20px;
   height: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
-
 }
 
 #project-title {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 #technical-image-container {
-  background-image: url('')
+  background-image: url('../img/technical-preview.png');
 }
 
 

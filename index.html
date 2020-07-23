@@ -19,7 +19,7 @@
         </div>
       </div>
     </section>
-    <nav id="nav-bar">
+    <nav id="navbar">
       <div class="link-container">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -47,24 +47,34 @@
         <h3 class="title">Projects</h3>
         <p class="tagline">These are some projects I have worked on</p>
         <div class="project-entries">
-          <div class="project-entry">
-            <div class="title-container">
-              <h5 id="project-title">Technical Page</h5>
+          <a href="https://charlottegray17.github.io/technical-page/" target="_blank">
+            <div class="project-tile" id="technical">
+              <div class="title-container">
+                <h5 id="project-title">Technical Page</h5>
+              </div>
             </div>
-            <div id="technical-image-container"></div>
-          </div>
-          <div class="project-entry">
-          <div class="title-container">
-            <h5 id="project-title">Unplugged Website</h5>
-          </div>
-          <div id="unplugged-image-container"></div>
-          </div>
-          <div class="project-entry">
-            <div class="title-container">
-              <h5 id="project-title">Product Page</h5>
+          </a>
+          <a href="https://charlottegray17.github.io/unplugged-project/" target="_blank">
+            <div class="project-tile" id="unplugged">
+              <div class="title-container">
+                <h5 id="project-title">Unplugged Website</h5>
+              </div>
             </div>
-            <div id="product-image-container"></div>
-          </div>
+          </a>
+          <a href="https://charlottegray17.github.io/product-page/" target="_blank">
+            <div class="project-tile" id="product">
+              <div class="title-container">
+                <h5 id="project-title">Product Page</h5>
+              </div>
+            </div>
+          </a>
+          <a href="https://charlottegray17.github.io/charlottegray17-panchos-pantry/" target="_blank">
+            <div class="project-tile" id="pantry">
+              <div class="title-container">
+                <h5 id="project-title">Pantry Site</h5>
+              </div>
+            </div>
+          </a>
         </div>
     </section>
     <section id="contact">
@@ -73,11 +83,11 @@
         <h5 class="tagline">Let's work together</h5>
         <p>I am interested in gaining professional work experience in the tech field.<br> Feel free to contact me with potential opportunities.</p>
         <div id="contact-links" class="link-selected">
-          <a onclick="changeLinks()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-          <a id="profile-link" href="https://github.com/charlottegray17"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a onclick="changeLinks()" href="mailto:charlotte.gray17@hotmail.co.uk?subject=FCC%20Portfolio%20Enquiry" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a id="profile-link" href="https://github.com/charlottegray17" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           <a href="https://twitter.com/graygirl17" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="http://www.shesupandaway.com/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-          <a href="https://www.freecodecamp.org/charlottegray17"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+          <a href="http://www.shesupandaway.com/" target="_blank"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+          <a href="https://www.freecodecamp.org/charlottegray17" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -94,7 +104,7 @@
 
       window.onscroll = function() {myFunction()};
 
-      var navbar = document.getElementById("nav-bar");
+      var navbar = document.getElementById("navbar");
       var sticky = navbar.offsetTop;
 
       function myFunction() {
