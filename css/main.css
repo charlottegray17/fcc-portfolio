@@ -697,6 +697,7 @@ body {
   #about #profile-desktop {
     display: block;
     height: 650px;
+    max-width: auto;
     position: absolute;
     bottom: 0;
     left: 150px;
@@ -707,6 +708,7 @@ body {
     padding-top: 100px;
     position: absolute;
     right: 100px;
+    background-color: rgba(158, 157, 157, 0.6);
   }
 
   #about-text .title,
@@ -730,7 +732,7 @@ body {
   #about-text .message-button {
     position: absolute;
     right: 0;
-    top: 350px; 
+    top: 350px;
   }
 
   .message-button {
