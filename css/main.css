@@ -24,7 +24,7 @@ body {
 #contact {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #about .title,
@@ -203,9 +203,13 @@ body {
   justify-content: center;
 }
 
-#about img {
+#about #profile-mobile {
   height: 250px;
   padding-top: 50px;
+}
+
+#about #profile-desktop {
+  display: none;
 }
 
 #about-text {
@@ -355,7 +359,11 @@ body {
 #projects {
   background-color: #b1dee0;
   height: auto;
-  padding-bottom: 50px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 #project-content {
@@ -366,7 +374,6 @@ body {
 }
 
 .project-entries {
-  width: 95vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
@@ -387,7 +394,7 @@ body {
 
 .project-tile {
   height: 320px;
-  width: 600px;
+  width: 80vw;
   margin: 20px;
   color: white;
   display: flex;
@@ -447,10 +454,6 @@ body {
   color: white;
 }
 
-#contact .title,
-#contact .tagline {
-}
-
 #contact-content {
   display: flex;
   flex-direction: column;
@@ -460,12 +463,26 @@ body {
   width: 100%;
 }
 
+#contact-content h5 {
+  font-size: 1.2rem;
+}
+
+#contact-content p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  padding-top: 20px;
+}
+
 #contact-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-around;
-  width: 40%;
+  width: 70%;
   padding-top: 4rem;
 }
 
@@ -563,8 +580,7 @@ body {
     position: absolute;
     z-index: -1;
     top: 30px;
-    right: 34px;
-    width: 800px;
+    left: 225px;
   }
 
   #welcome-section > .welcome-content > #tagline {
@@ -674,11 +690,16 @@ body {
     height: 90vh;
   }
 
-  #about img {
-    position: absolute;
+  #about #profile-mobile {
+    display: none;
+  }
+
+  #about #profile-desktop {
+    display: block;
     height: 650px;
-    left: 30px;
+    position: absolute;
     bottom: 0;
+    left: 150px;
   }
 
   #about-text {
@@ -706,11 +727,15 @@ body {
     text-decoration: underline;
   }
 
+  #about-text .message-button {
+    position: absolute;
+    right: 0;
+    top: 350px; 
+  }
+
   .message-button {
     margin-top: 2rem;
     padding: 25px;
-    position: absolute;
-    right: 0px;
     width: auto;
     background-color: #3ea095;
     border-radius: 8px;
