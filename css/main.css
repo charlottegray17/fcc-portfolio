@@ -11,6 +11,7 @@ body {
 :root {
   --primary-color: #f5af15;
   --secondary-color: #363636;
+  --primary-blue: #3ea095;
   --dark-grey: #101010;
   --transition-speed: 400ms;
 }
@@ -365,6 +366,12 @@ body {
   align-items: center;
 }
 
+.project-entries {
+  width: 90vw;
+  display: flex;
+  flex-direction: row wrap;
+}
+
 .project-entry {
   padding-top: 20px;
   display: flex;
@@ -372,15 +379,33 @@ body {
   align-items: center;
 }
 
-.project-entry #image-container {
+.project-entry {
   height: 320px;
   width: 600px;
   background-color: darkblue;
   margin: 20px;
   color: white;
   display: flex;
-  align-items: center;
+}
+
+.title-container {
+  background-color: grey;
+  position: relative;
+  top: -20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
   justify-content: center;
+
+}
+
+#project-title {
+  display: flex;
+  align-items: center;
+}
+
+#technical-image-container {
+  background-image: url('')
 }
 
 
@@ -424,7 +449,7 @@ body {
 #contact-links i:hover {
   color: var(--primary-color);
   transform: translateY(-10px);
-  transition: var(--transition-speed);
+  transition: var(--transition-speed) ease;
 }
 
 #contact-links a {
